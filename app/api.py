@@ -1,5 +1,4 @@
 from app.services.fetcher import fetch_data_from_api, fetch_existing_hosts
-from app.visualize_hosts import generate_visualization
 from flask import Blueprint, current_app
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from app.transform.common_transform import transform_data, combine_data
@@ -52,9 +51,3 @@ def fetch_data():
 
     logger.info(f"data fetched, transformed, deduplicated, and loaded successfully")
     return "data processed successfully", 200
-
-
-@bp.route('/visualize', methods=['GET'])
-def visualize():
-    generate_visualization()
-    return "Visualization generated", 200

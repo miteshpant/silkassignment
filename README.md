@@ -32,4 +32,9 @@ This project is designed to build a scalable data pipeline using Flask and Mongo
 
 ## Visualization
 - python visualize_hosts.py
+
+![dom](https://github.com/miteshpant/silkassignment/assets/290845/68885a56-3cbf-41fe-b6c5-10569dd8ef39)
+![DOOS](https://github.com/miteshpant/silkassignment/assets/290845/fa844e0a-fccb-4611-b72a-0de04532d56d)
+
+  
   

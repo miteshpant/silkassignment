@@ -29,6 +29,9 @@ This project is designed to build a scalable data pipeline using Flask and Mongo
 - Update your authentication token in app/config.py TOKEN
 - python run.py
 - curl  http://127.0.0.1:5000/data
+- login to mongodb on shell
+- use silk 
+-  db.common_model.find();
 
 ## Visualization
 - python visualize_hosts.py

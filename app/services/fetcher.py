@@ -1,4 +1,6 @@
 import logging
+
+import app.config
 from flask import current_app
 import requests
 
@@ -10,7 +12,7 @@ def fetch_data_from_api(url, params):
     try:
         headers = {
             'accept': 'application/json',
-            'token': 'mitesh.pant@gmail.com_81ee2bd7-9be8-4002-9038-253415e2a1bc'
+            'token': app.config.Config.TOKEN
         }
         response = requests.post(url, params=params, headers=headers)
         response.raise_for_status()

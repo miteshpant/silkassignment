@@ -19,11 +19,11 @@ This project is designed to build a scalable data pipeline using Flask and Mongo
 
 ## Installation
 - Clone the Repository:
-  -- git clone https://github.com/miteshpant/silkassignment.git
-  -- cd silkassignment
-  -- pip install -r requirements.txt
+  - git clone https://github.com/miteshpant/silkassignment.git
+  - cd silkassignment
+  - pip install -r requirements.txt
 - Set up MongoDB
-  -- node setup_mongo.js
+  - node setup_mongo.js
 
 ## Running the Application
 - Update your authentication token in app/config.py TOKEN

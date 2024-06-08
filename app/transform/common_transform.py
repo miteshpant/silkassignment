@@ -1,5 +1,6 @@
 from app.transform.qualys_transform import transform_qualys
 from app.transform.crowdstrike_transform import transform_crowdstrike
+from app.transform.tenable_transform import transform_tenable
 
 
 def transform_data(new_data):
@@ -13,6 +14,10 @@ def transform_data(new_data):
             # deduplicate data from crowdstrike
             deduplicated_merged_data = deduplicate_hosts_within_model(new_data[model], 'hostname', 'local_ip')
             all_transformed_data.extend(transform_crowdstrike(deduplicated_merged_data, model))
+        elif model == 'tenable':
+            #deduplicate data from tenable
+            deduplicated_merged_data = deduplicate_hosts_within_model(new_data[model], 'host_name', 'display_fqdn')
+            all_transformed_data.extend(transform_tenable(deduplicated_merged_data, model))
     #         deduplicate final data from all sources
     return deduplicate_hosts_within_model(all_transformed_data,'hostname','ip_address')
 
